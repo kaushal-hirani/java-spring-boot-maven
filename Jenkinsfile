@@ -1,6 +1,6 @@
 pipeline {
 environment {
-registry = "kaushalhirani/java-test-maven"
+registry = "kaushalhirani/new-test"
 registryCredential = 'docker_token'
 dockerImage = ''
 }
