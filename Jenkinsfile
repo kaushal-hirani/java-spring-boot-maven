@@ -28,7 +28,7 @@ dockerImage.push("latest")
 }
 }
 }
-stage('Run container on AWS 5'){
+stage('Run container on AWS 6'){
 steps{
 script{
 def remote = [:]
