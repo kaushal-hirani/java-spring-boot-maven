@@ -40,7 +40,6 @@ remote.allowAnyHosts = true
 sshPut remote: remote, from: './docker-compose.yml', into: '.'
 sshCommand remote: remote, command: "docker-compose top"
 sshCommand remote: remote, command: "docker-compose stop"
-sshCommand remote: remote, command: "docker image rm -f kaushalhirani/java-test-maven:latest"
 sshCommand remote: remote, command: "docker-compose up -d"
 sshCommand remote: remote, command: "docker ps"
 }
