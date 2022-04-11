@@ -1,6 +1,6 @@
 pipeline {
 environment {
-registry = "kaushalhirani/new-test"
+registry = "kaushalhirani/maven-java-project"
 registryCredential = 'docker_token'
 dockerImage = ''
 }
@@ -33,14 +33,14 @@ steps{
 script{
 def remote = [:]
 remote.name = 'app server'
-remote.host = '54.237.196.155'
+remote.host = '54.90.112.132'
 remote.user = 'ec2-user'
 remote.identityFile = "/var/lib/jenkins/.ssh/id_rsa.pem"
 remote.allowAnyHosts = true
 sshPut remote: remote, from: './docker-compose.yml', into: '.'
 sshCommand remote: remote, command: "docker-compose top"
 sshCommand remote: remote, command: "docker-compose down"
-sshCommand remote: remote, command: "docker rmi -f kaushalhirani/new-test:latest"
+sshCommand remote: remote, command: "docker rmi -f kaushalhirani/maven-java-project:latest"
 sshCommand remote: remote, command: "docker-compose up -d"
 sshCommand remote: remote, command: "docker ps"
 }
