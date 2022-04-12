@@ -1,6 +1,6 @@
 pipeline {
 environment {
-registry = "kaushalhirani/maven-java-project"
+registry = "kaushalhirani/final-test"
 registryCredential = 'docker_token'
 dockerImage = ''
 }
@@ -40,7 +40,7 @@ remote.allowAnyHosts = true
 sshPut remote: remote, from: './docker-compose.yml', into: '.'
 sshCommand remote: remote, command: "docker-compose top"
 sshCommand remote: remote, command: "docker-compose down"
-sshCommand remote: remote, command: "docker rmi -f kaushalhirani/maven-java-project:latest"
+sshCommand remote: remote, command: "docker rmi -f kaushalhirani/final-test:latest"
 sshCommand remote: remote, command: "docker-compose up -d"
 sshCommand remote: remote, command: "docker ps"
 }
