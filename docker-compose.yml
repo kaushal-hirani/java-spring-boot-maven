@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  maven-project:
+  maven-project-new:
     image: kaushalhirani/maven-java-project:latest
     ports:
       - "8080:8080"
