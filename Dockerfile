@@ -4,4 +4,4 @@ COPY pom.xml /app/
 COPY src /app/src
 RUN mvn -e -B package
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "target/hello-world-spring-boot-pom-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/target/hello-world-spring-boot-pom-0.0.1-SNAPSHOT.jar"]
