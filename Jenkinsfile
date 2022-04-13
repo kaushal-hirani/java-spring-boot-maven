@@ -41,7 +41,7 @@ remote.allowAnyHosts = true
 // sshCommand remote: remote, command: "docker-compose top"
 // sshCommand remote: remote, command: "docker-compose down"
 sshCommand remote: remote, command: "docker rmi -f kaushalhirani/final-test:latest"
-sshCommand remote: remote, command: "docker run -d kaushalhirani/final-test:latest"
+sshCommand remote: remote, command: "docker run -d -p 8080:8080 kaushalhirani/final-test:latest"
 // sshCommand remote: remote, command: "docker-compose up -d"
 sshCommand remote: remote, command: "docker ps"
 }
